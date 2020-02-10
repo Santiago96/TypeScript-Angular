@@ -7,10 +7,14 @@ import { environment } from 'src/environments/environment';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { PlayerService } from './services/player.service';
+import { TeamService } from './services/team.service';
+import { TeamTableComponent } from './team-table/team-table.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TeamTableComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +22,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     AngularFireDatabaseModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PlayerService, TeamService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
