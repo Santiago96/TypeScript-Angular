@@ -5,7 +5,7 @@
         <table cellpadding="0" cellspaciong="0" border="0">
             <thead>
                 <tr>
-                    <th **ngFor="let header of tableHeaders">{{header}}</th>
+                    <th *ngFor="let header of tableHeaders">{{header}}</th>
                 </tr>
             </thead>
         </table>
@@ -13,9 +13,10 @@
     <div class="tbl-content">
         <table cellpadding="0" cellspaciong="0" border="0">
             <tbody>
-                <tr **ngFor="let team of (teams$ | async)">
+                <tr *ngFor="let team of (teams$ | async)">
                     <th>{{ team.name }}</th>
                     <th>{{ team.country }}</th>
+                    <th></th>
                 </tr>
             </tbody>
         </table>

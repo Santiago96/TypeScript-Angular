@@ -13,7 +13,7 @@ import { Countries } from '../enums/Countries';
 })
 export class TeamTableComponent implements OnInit {
 
-  public teams$ = Observable<Team[]>;
+  public teams$ = new Observable<Team[]>();
   public tableHeaders = TeamsTableHeaders;
   
   constructor(private teamService: TeamService) { }
