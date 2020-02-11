@@ -1,1 +1,23 @@
-<p>team-table is working!</p>
+<section>
+    <h1>My Team</h1>
+
+    <div class="tbl-header">
+        <table cellpadding="0" cellspaciong="0" border="0">
+            <thead>
+                <tr>
+                    <th **ngFor="let header of tableHeaders">{{header}}</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="tbl-content">
+        <table cellpadding="0" cellspaciong="0" border="0">
+            <tbody>
+                <tr **ngFor="let team of (teams$ | async)">
+                    <th>{{ team.name }}</th>
+                    <th>{{ team.country }}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
